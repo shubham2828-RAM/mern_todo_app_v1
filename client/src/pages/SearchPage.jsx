@@ -16,7 +16,7 @@ export default function SearchPage() {
 
   // Debounce: update the URL query 300ms after typing stops
   useEffect(() => {
-    const t = setTimeout(() => setParams(input.trim() ? { q: input.trim() } : {}, { replace: true }), 300);
+    const t = setTimeout(() => setParams(input.trim() ? { q: input.trim() } : {}, { replace: true }), 1000);
     return () => clearTimeout(t);
   }, [input, setParams]);
 
